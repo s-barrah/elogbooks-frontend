@@ -9,6 +9,18 @@
         var vm = this;
         vm.job = jobResponse;
 
+        vm.job.status = {};
+        vm.job.status.options = [{
+            id: "0",
+            name: "Open"
+        }, {
+            id: "1",
+            name: "In Progress"
+        }, {
+            id: "2",
+            name: "Closed"
+        }];
+
         vm.update = update;
 
         function update() {
